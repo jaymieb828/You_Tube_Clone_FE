@@ -1,9 +1,9 @@
 import React, {useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./VideoPage.css";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import axios from 'axios'
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
-
 
 
 const VideoPage = () => {
