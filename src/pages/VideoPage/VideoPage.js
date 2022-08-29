@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import axios from 'axios'
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
-
+import './VideoPage.css';
 
 
 const VideoPage = () => {
@@ -30,9 +30,6 @@ const VideoPage = () => {
   console.log(response.data.items)
 }
 
-  
-
-  
 
   return (
     <div>
