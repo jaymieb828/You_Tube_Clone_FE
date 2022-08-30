@@ -8,6 +8,8 @@ import { KEY } from '../../localKey';
 import CommentForm from "../../components/CommentForm/CommentForm";
 import CommentList from "../../components/CommentList/CommentList";
 import RelatedVideos from "../../components/RelatedVideos/RelatedVideos";
+import SearchPage from "../SearchPage/SearchPage";
+
 import './HomePage.css';
 const HomePage = () => {
 
@@ -36,7 +38,7 @@ const HomePage = () => {
   }, [videoId])
 
 
-async function getSearchResults(searchTerm = 'Disney Vacation'){
+async function getSearchResults(searchTerm = 'Adventures of the B Fam Hawaii 2021'){
   let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchTerm}&type=video&maxResults=5&key=${KEY}`);
   setVideoId(response.data.items[0].id.videoId)
   console.log(response.data.items[0].id.videoId)
@@ -58,8 +60,6 @@ async function getAllComments(){
   setAllComments(response.data)
   console.log(response.data)
 }
-
-
 
 async function postComment(text){
   let newComment = {

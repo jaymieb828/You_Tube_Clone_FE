@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Modal from 'react-modal'
 
 
 
@@ -24,11 +24,21 @@ const Comment = (props) => {
 
     return (  
         <div>
-            <div>
+           <div>
                 <button type='button' className='comment-reply' onClick={() => setModalIsOpen(true)}>Reply</button>
             </div>
-            
-            <div className='reply-text'>Reply: {reply}</div>
+            <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} className='modal-back'>
+                <form>
+                    <div>
+                        <label htmlFor="Reply" className='reply-text'>Reply:{" "}</label>
+                        <input onChange={(e) => setReplyText(e.target.value)} type= "text" id = 'Reply' className='reply-input'/>
+                    </div>
+                    <div>
+                        <button type = 'button' onClick={() => {handlesubmit()}} className='reply-post'>Post</button>
+                        
+                    </div>
+                </form>
+            </Modal>
         </div>
  
     );

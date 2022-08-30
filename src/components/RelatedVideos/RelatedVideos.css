@@ -1,0 +1,13 @@
+ .related-contain {
+    display: grid;
+    flex-direction: grid;
+    border-spacing:  .2rem;
+    margin-bottom: 10rem;
+  }
+  
+  .related-image {
+    height: 150px;
+    width: 265px;
+    margin-bottom: 2rem;
+  } 
+

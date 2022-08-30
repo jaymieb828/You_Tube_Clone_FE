@@ -3,16 +3,34 @@
   }
   
   .home-video-player {
-    margin-left: 2rem;
+    display: flex;
+    margin-left: 25rem;
     margin-top: 5rem;
   }
+/* 
+  .home-video-player iframe {
+    position: flex;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+  }
+   */
+  
   
   .home-comment-form {
-    margin-left: 24rem;
+    display: flex;
+    margin-left: 25rem;
     margin-top: 1rem;
   }
   
   .home-related {
+    display: flex;
+    grid-row: inherit;
+    grid-area: auto;
     margin-left: 12rem;
     margin-top: 5rem;
   }
@@ -20,3 +38,11 @@
   .homepage-contain {
     margin-bottom: 4rem;
   }
+
+  .homepate-related-contain {
+    display: grid;
+    flex-direction: grid;
+    border-spacing:  .2rem;
+    margin-bottom: 10rem;
+  }
+  

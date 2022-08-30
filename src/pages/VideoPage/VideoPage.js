@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import axios from 'axios'
@@ -16,9 +16,6 @@ const VideoPage = () => {
   
   let key = process.env.REACT_APP_API_KEY
 
-  useEffect(() => {
-    getSearchResults();
-  },[])
 
 
   async function getSearchResults(searchTerm='welcome to youtube'){
@@ -34,7 +31,7 @@ const VideoPage = () => {
   return (
     <div>
       <div className="video-reg-contain"><Link to="/register" ><b>Register Here</b></Link></div>
-      <div><SearchBar getSearchResults={getSearchResults}/></div>
+      <div><SearchBar searchResults={getSearchResults}/></div>
       <div className = 'video-contain'>
         <div className="video-container">
             <div className='video-player'>

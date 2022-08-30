@@ -31,7 +31,7 @@ const SearchPage = () => {
       <div className="search-register">
         <Link to="/register" ><b>Click to Register</b></Link>
       </div>
-      <div className="search-title"><p className="search-para"><medium className='tube-you'>HUNTR</medium> General Search Page</p></div>
+      <div className="search-title"><p className="search-para"><medium className='tube-you'></medium> General Search Page</p></div>
        <div className=""><SearchBar getSearchResults={getSearchResults}/></div>
        <div className="disclaimer-title"><p className="disclaim-para">Welcome to search but <medium className='log-reg-font'>login and/or register</medium> to view the videos</p></div>
        <div className="sresult-title"><h3>Search Results</h3></div>
